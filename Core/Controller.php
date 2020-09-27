@@ -5,9 +5,9 @@ class Controller
     var $vars = [];
     var $layout = "index";
 
-    function set($d)
+    function set($data)
     {
-        $this->vars = array_merge($this->vars, $d);
+        $this->vars = array_merge($this->vars, $data);
     }
 
     // viewname
