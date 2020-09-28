@@ -6,6 +6,8 @@ class Model
 
     protected $primaryKey = 'id';
 
+    protected $columns = [];
+
     protected $select = ['*'];
 
 
@@ -16,11 +18,31 @@ class Model
         return $this;
     }
 
+
+    public function fill(array $attributes)
+    {
+        foreach ($attributes as $key => $value) {
+            $this->setAttribute($key, $value);
+        }
+
+        return $this;
+    }
+
+
+    public function setAttribute($key, $value)
+    {
+        $this->columns[$key] = $value;
+
+        return $this;
+    }
+
+
     public function prepare($query)
     {
         $req = Database::getBdd()->prepare($query);
         return $req;
     }
+
 
     public function execute( $req, array $params = [] )
     {
@@ -28,8 +50,10 @@ class Model
         return $req;
     }
 
+
     public function fetchAll($req)
     {
         return $req->fetchAll();
     }
+
 }
