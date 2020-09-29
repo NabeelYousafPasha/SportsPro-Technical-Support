@@ -16,7 +16,7 @@
         <div class="col-md-12">
             <form
                 method='POST'
-                action='#'
+                action='<?php WEBROOT ?>product/create'
             >
                 <div class="form-group">
                     <label for="productCode">Code:</label>

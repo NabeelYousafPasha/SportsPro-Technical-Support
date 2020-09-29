@@ -4,7 +4,7 @@
         <h2>Administrators</h2>
         <ul>
             <li><a href="product">Manage Products</a></li>
-            <li><a href="under_construction.php">Manage Technicians</a></li>
+            <li><a href="technician">Manage Technicians</a></li>
             <li><a href="under_construction.php">Manage Customers</a></li>
             <li><a href="under_construction.php">Create Incident</a></li>
             <li><a href="under_construction.php">Assign Incident</a></li>
