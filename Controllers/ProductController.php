@@ -14,7 +14,18 @@ class ProductController extends Controller
 
     public function create()
     {
-        
+        if ($_SERVER['REQUEST_METHOD'] == 'POST')
+        {
+            $product = new Product();
+
+            if ($product->create($_POST))
+            {
+                $this->redirect('product');
+            }
+        }
+
+        // else GET
+        $this->render("create");
     }
 
     public function delete($id)
@@ -22,7 +33,12 @@ class ProductController extends Controller
         $product = new Product();
         if ($product->delete($id))
         {
-            header("Location: " . WEBROOT . "product");
+            $this->redirect('product');
         }
+    }
+
+    public function redirect($controller)
+    {
+        header("Location: " . WEBROOT . $controller);
     }
 }
