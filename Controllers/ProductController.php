@@ -37,8 +37,4 @@ class ProductController extends Controller
         }
     }
 
-    public function redirect($controller)
-    {
-        header("Location: " . WEBROOT . $controller);
-    }
 }
