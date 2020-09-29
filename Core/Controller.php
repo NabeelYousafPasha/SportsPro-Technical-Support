@@ -28,6 +28,13 @@ class Controller
         }
     }
 
+
+    public function redirect($controller)
+    {
+        header("Location: " . WEBROOT . $controller);
+    }
+
+
     private function secure_input($data)
     {
         $data = trim($data);
