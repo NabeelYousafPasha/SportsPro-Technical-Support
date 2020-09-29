@@ -7,7 +7,7 @@
                 href="<?php WEBROOT ?>product/create"
                 class="btn btn-primary btn-xs float-right pull-right"
             >
-                Add new task
+                Add New Product
             </a>
         </div>
     </div>
