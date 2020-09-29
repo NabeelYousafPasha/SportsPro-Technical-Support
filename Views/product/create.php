@@ -1,6 +1,16 @@
 <div class="container">
 
     <h1>Create Product</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <a
+                href="<?php WEBROOT ?>product/index"
+                class="btn btn-primary btn-xs float-right pull-right"
+            >
+                View Product List
+            </a>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-md-12">
@@ -67,14 +77,6 @@
                 </button>
             </form>
         </div>
-    </div>
-
-    <div>
-        <a
-            href="<?php WEBROOT ?>index"
-        >
-            View Product List
-        </a>
     </div>
 
 </div>

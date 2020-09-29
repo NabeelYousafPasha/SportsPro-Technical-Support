@@ -23,7 +23,7 @@ class ProductController extends Controller
                 $this->redirect('product');
             }
         }
-        
+
         // else GET
         $this->render("create");
     }

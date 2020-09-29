@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="<?php ASSET ?>public/css/main.css">
+    <base href="http://localhost:8090/project_start/" />
+    <link rel="stylesheet" type="text/css" href="public/css/main.css">
 </head>
 
