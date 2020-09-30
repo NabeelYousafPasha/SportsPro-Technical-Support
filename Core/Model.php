@@ -10,6 +10,8 @@ class Model
 
     protected $select = ['*'];
 
+    protected $where = [];
+
 
     public function select(array $selectColumns = ['*'])
     {
@@ -54,6 +56,11 @@ class Model
     public function fetchAll($req)
     {
         return $req->fetchAll();
+    }
+
+    public function fetch($req)
+    {
+        return $req->fetch();
     }
 
 }
