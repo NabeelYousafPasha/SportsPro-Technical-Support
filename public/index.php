@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 define('WEBROOT', str_replace("public/index.php", "", $_SERVER["SCRIPT_NAME"]));
 define('ROOT', str_replace("public/index.php", "", $_SERVER["SCRIPT_FILENAME"]));
 define('ASSET', str_replace("public/index.php", "public/", $_SERVER["SCRIPT_FILENAME"]));

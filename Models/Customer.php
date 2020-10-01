@@ -33,8 +33,12 @@ class Customer extends Model
         return $this->fetchAll($req);
     }
 
-    public function where($column, $operator, $value)
+    public function where($column, $operator, $value, $quotes = false)
     {
+        if ($quotes) {
+            $value = "'$value'";
+        }
+
         return " WHERE $column $operator $value";
     }
 

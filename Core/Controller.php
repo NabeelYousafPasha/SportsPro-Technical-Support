@@ -5,13 +5,13 @@ class Controller
     var $vars = [];
     var $layout = "index";
 
-    function set($data)
+    public function set($data)
     {
         $this->vars = array_merge($this->vars, $data);
     }
 
     // viewname
-    function render($filename)
+    public function render($filename)
     {
         extract($this->vars);
         ob_start();
@@ -29,9 +29,21 @@ class Controller
     }
 
 
-    public function redirect($controller)
+    public function redirect($controller = '')
     {
-        header("Location: " . WEBROOT . $controller);
+        if ($controller) {
+            header("Location: " . WEBROOT . $controller);
+        }
+
+        header("Location: ".WEBROOT);
+    }
+
+
+    public function logout() {
+        session_destroy();
+
+        // redirect
+        $this->redirect();
     }
 
 
