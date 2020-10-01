@@ -15,6 +15,16 @@
             <li><a href="<?php WEBROOT ?>">Home</a></li>
         </ul>
     </nav>
+
+    <?php if ($_SESSION['user'] ?? false) { ?>
+    <a
+        href="<?php WEBROOT ?>login/auth/logout"
+        class="btn btn-link btn-xs float-right pull-right"
+    >
+        Logout
+    </a>
+    <?php } ?>
+    <br>
 </header>
 
 <!-- body content-->
