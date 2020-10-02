@@ -26,4 +26,24 @@ class CustomerRegisteredProduct extends Model
             'registrationDate' => $request['registrationDate'],
         ]);
     }
+
+    public function getWhere($column, $operator, $value)
+    {
+        $where = $this->where($column, $operator, $value);
+
+        return $this->get($where);
+    }
+
+    public function get($where = null)
+    {
+        $sql = "SELECT * FROM " . $this->table;
+
+        if ($where) {
+            $sql .= $where . " ";
+        }
+
+        $req = $this->prepare($sql);
+        $req = $this->execute($req);
+        return $this->fetchAll($req);
+    }
 }

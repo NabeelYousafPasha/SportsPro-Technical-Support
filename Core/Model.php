@@ -31,6 +31,16 @@ class Model
     }
 
 
+    public function where($column, $operator, $value, $quotes = false)
+    {
+        if ($quotes) {
+            $value = "'$value'";
+        }
+
+        return " WHERE $column $operator $value";
+    }
+
+
     public function setAttribute($key, $value)
     {
         $this->columns[$key] = $value;
